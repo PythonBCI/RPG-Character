@@ -18,12 +18,6 @@ def create_character(create_character, strength, intelligence, charisma):
     if len(create_character) > 10:
         return "The character name is too long"
     
-    
-    
-    strength = int(strength)
-    intelligence = int(intelligence)
-    charisma = int(charisma)
-    
     if not isinstance(strength, int) or not isinstance(intelligence, int) or not isinstance(charisma, int):
         return "All stats should be integers"
     
