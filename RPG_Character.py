@@ -2,34 +2,35 @@ full_dot = '●'
 empty_dot = '○'
 
 
-def create_character(character_name, strength, intelligence, charisma):
+def create_character(create_character, strength, intelligence, charisma):
 
-stats = (strength, intelligence, charisma)
+    stats = (strength, intelligence, charisma)
+    
+    if not isinstance(create_character, str):
+        return "The character name should be a string"
+        
+    if ' ' in create_character:
+        return "The character name should not contain spaces"
 
-    character_name.str = 
+    if not create_character:
+        return "The character should have a name"
 
-if not character_name:
-    print("The Character should have a name")
-    return None 
-
-if len(character_name) > 10:
-print("The character name is too long")
-return None 
-
-if ' ' in character_name:
-    print("The character name should not contain spaces")
-    return None
-
-strength = int(strength)
-intelligence = int(intelligence)
-charisma = int(charisma)
-
-if not isinstance(strength, int) or not isinstance(intelligence, int) or not isinstance(charisma, int):
-    return None
-
-if not all(x <= 4 for x in [strength, intelligence, charisma]):
-    return None
-
-if not all(x == 7 for x in stats):
-    return None
-else None
+    if len(create_character) > 10:
+        return "The character name is too long"
+    
+    
+    
+    strength = int(strength)
+    intelligence = int(intelligence)
+    charisma = int(charisma)
+    
+    if not isinstance(strength, int) or not isinstance(intelligence, int) or not isinstance(charisma, int):
+        return "All stats should be integers"
+    
+    if not all(x <= 4 for x in [strength, intelligence, charisma]):
+        return None
+    
+    if not all(x == 7 for x in stats):
+        return None
+    else: 
+        print(create_character, "\n", "STR", "\n", "INT", "\n", "CHA")
