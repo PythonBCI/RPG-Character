@@ -4,6 +4,8 @@ empty_dot = '○'
 
 def create_character(character_name, strength, intelligence, charisma):
 
+stats = (strength, intelligence, charisma)
+
     character_name.str = 
 
 if not character_name:
@@ -27,3 +29,7 @@ if not isinstance(strength, int) or not isinstance(intelligence, int) or not isi
 
 if not all(x <= 4 for x in [strength, intelligence, charisma]):
     return None
+
+if not all(x == 7 for x in stats):
+    return None
+else None
